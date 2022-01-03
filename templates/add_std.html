@@ -1,0 +1,65 @@
+{% extends 'master.html' %} {% block title %} add student {% endblock %} {%
+block content %}
+<div class="container p-4 border mt-4">
+  <h2 class="text-center mb-4">Add New Student</h2>
+  <div>
+    <form action="/add_std" method="post">
+      <div class="form-group m-2">
+        <label for="stdid">Student ID</label>
+        <input
+          type="text"
+          class="form-control m-2"
+          id="stdid"
+          name="stdid"
+          placeholder="20210000"
+          required
+          maxlength="8"
+        />
+        <small id="IdHelp" class="form-text text-muted"
+          >We'll never share your Student Id with anyone else.</small
+        >
+      </div>
+      <div class="form-group m-2">
+        <label for="std_name">Student name</label>
+        <input
+          type="text"
+          class="form-control m-2"
+          id="std_name"
+          name="std_name"
+          placeholder="Student name"
+          required
+        />
+      </div>
+      <div class="form-group m-2">
+        <label for="std_depatment">Collage</label>
+        <input
+          type="text"
+          class="form-control m-2"
+          id="std_depatment"
+          name="std_depatment"
+          placeholder="Student Collage"
+        />
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary m-2">
+          Register Student
+        </button>
+        <button class="btn btn-primary m-2">
+          <a class="text-white text-decoration-none" href="/"
+            >Going Show Student</a
+          >
+        </button>
+        <button class="btn btn-primary m2">
+          <a href="/search_std" class="text-white text-decoration-none"
+            >Update Student Information</a
+          >
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="text-center">
+    <strong>{{massage}}</strong>
+  </div>
+</div>
+
+{% endblock %}

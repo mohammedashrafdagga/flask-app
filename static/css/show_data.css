@@ -1,0 +1,25 @@
+.box {
+  margin: 4px 4px;
+  padding: 4px;
+  border: 1px solid #36393e;
+  width: 450px;
+}
+
+.box_title {
+  padding: 2px 0px 0 2px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #36434d;
+}
+.box_title span,
+.box_body span {
+  font-size: 18px;
+  font-weight: bold;
+  padding-right: 8px;
+}
+p {
+  margin-bottom: 0;
+}
+
+.box_body {
+  padding-left: 2px;
+}

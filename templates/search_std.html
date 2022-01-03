@@ -1,0 +1,31 @@
+{% extends "master.html" %} {% block title %} Search-Student {% endblock %} {%
+block content %}
+
+<div class="container p-4 border mt-4">
+  <h3 class="text-center mb-4">Search To Update Student Information</h3>
+  <div>
+    <form action="/search_std" method="post">
+      <div class="form-group m-2">
+        <label for="stdid">Student ID</label>
+        <input
+          type="text"
+          class="form-control m-2"
+          id="stdid"
+          name="stdid"
+          placeholder="20210000"
+          required
+          maxlength="8"
+          
+        />
+      <button type="submit" class="btn btn-primary m-2">
+          Search Student
+        </button>
+
+      </div>
+
+      <div class="text-center">
+        {{massage}}
+      </div>
+</div>
+
+{% endblock %}

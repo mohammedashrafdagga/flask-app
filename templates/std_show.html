@@ -1,0 +1,41 @@
+{% extends 'master.html' %} {% block title %} Student show {% endblock %} {%
+block content %}
+<div class="container p-4">
+  <div class="mb-2 text-center">
+    <h3>List of Student from DB</h3>
+  </div>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">STUDENT-ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Deparment</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in range(row_len) %}
+      <tr>
+        <th scope="row">{{i}}</th>
+        <td>{{rows[i][0]}}</td>
+        <td>{{rows[i][1]}}</td>
+        <td>{{rows[i][2]}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div>
+    <button class="btn btn-primary">
+      <a href="/add_std" class="text-white text-decoration-none"
+        >Return to add Student</a
+      >
+    </button>
+    <button class="btn btn-primary">
+      <a href="/search_std" class="text-white text-decoration-none"
+        >Return to Update Student Information</a
+      >
+    </button>
+  </div>
+</div>
+
+{% endblock %}

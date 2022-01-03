@@ -1,0 +1,27 @@
+{% extends "master.html" %} {% block title %} Calculator Page {% endblock %} {%
+block content %}
+<form action="" method="post">
+  <input
+    type="text"
+    placeholder="First Number"
+    name="num1"
+    value="{{ request.form.num1 }}"
+  />
+  <input
+    type="text"
+    placeholder="Operator"
+    name="op"
+    value="{{ request.form.op }}"
+  />
+  <input
+    type="text"
+    placeholder="Second Number"
+    name="num2"
+    value="{{ request.form.num2 }}"
+  />
+  <input class="btn btn-default" type="submit" value="Calculate" />
+</form>
+
+{% if result %}
+<p>{{result}}</p>
+{%endif%} {% endblock %}

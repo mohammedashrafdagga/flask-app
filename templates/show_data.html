@@ -1,0 +1,16 @@
+{% extends "master.html" %} {% block css_file %}
+<link rel="stylesheet" href="/static/css/show_data.css" />
+{% endblock %} {% block title %} show_data {% endblock %} {% block content %}
+
+<div class="container">
+  <div class="box">
+    <div class="box_title">
+      <p><span>Title:</span> {{data[email]['title']}}</p>
+    </div>
+    <div class="box_body">
+      <p><span>Massage:</span> {{data[email]['massage']}}</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
